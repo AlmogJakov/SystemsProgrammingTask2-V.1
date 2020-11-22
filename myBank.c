@@ -65,7 +65,6 @@ void closeAcc(int acc){
 }
 
 void addInterest(double interest){
-    if (interest==0) return;
     for (int i = 0; i<50; i++) {
         if (Accs[1][i]==1) {
             Accs[0][i]*=(1+(interest/100));

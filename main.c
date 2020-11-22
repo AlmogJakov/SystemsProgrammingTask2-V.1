@@ -11,45 +11,41 @@ int main()
     while(bool==1){
             printf("Transaction type?\n");
             scanf(" %c", &option);
-        if (option=='O'){ // openAcc
+        if (option=='O'){
             printf("Initial deposit?:\n");
             scanf(" %lf", &amount);
             openAcc(amount);
-        } else if (option=='B') { // balance
+        } else if (option=='B') {
             printf("Account number?:\n");
             scanf(" %d", &accNum);
             balance(accNum);
-        } else if (option=='D') { // deposit
+        } else if (option=='D') {
             printf("Account number?:\n");
             scanf(" %d", &accNum);
             printf("Amount?:\n");
             scanf(" %lf", &amount);
             deposit(accNum, amount);
-        } else if (option=='W') { // withdrawal
+        } else if (option=='W') {
             printf("Account number?:\n");
             scanf(" %d", &accNum);
             printf("Amount?:\n");
             scanf(" %lf", &amount);
             withdrawal(accNum, amount);
-        } else if (option=='C') { // closeAcc
+        } else if (option=='C') {
             printf("Account number?:\n");
             scanf(" %d", &accNum);
             closeAcc(accNum);
-        } else if (option=='I') { // addInterest
+        } else if (option=='I') {
             printf("Interest rate?:\n");
             scanf(" %lf", &interest);
             addInterest(interest);
-        } else if (option=='P') { // printAllAccs
+        } else if (option=='P') {
             printAllAccs();
-        } else if (option=='E') { // closeAllAccs
+        } else if (option=='E') {
             closeAllAccs();
             bool = 0;
         } else {
             printf("Please enter a proper input!\n");
-            //int flushall( void );
-            //while (scanf(" %c", &option) != EOF){
-            //    scanf(" %c", &option);
-            //}
         }
         printf("\n");
     }

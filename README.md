@@ -1,7 +1,8 @@
 # SystemsProgrammingTask2
 A simple tool for managing bank accounts.
 
-<h2>TO-DO list</h2>  
-- add comments  
-- input tests  
-- add dynamic library  
+<h3>TO-DO list</h3>  
+
+- Add comments  
+- Input tests  
+- Add dynamic library  

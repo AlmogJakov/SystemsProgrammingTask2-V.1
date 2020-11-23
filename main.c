@@ -46,6 +46,8 @@ int main()
             bool = 0;
         } else {
             printf("Please enter a proper input!\n");
+            // clean buffer loop (for incorrect input of several characters at once)
+            while ((option=getchar())!='\n'&&option!=EOF) { }
         }
         printf("\n");
     }

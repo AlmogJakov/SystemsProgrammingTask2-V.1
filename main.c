@@ -38,7 +38,7 @@ int main()
                 printf("Please enter a valid input!\n");
                 while ((ch=getchar())!='\n'&&ch!=EOF) { }
             }
-
+            
         } else if (option=='D'&&oneCharInput==1) { // deposit
             printf("Account number?:\n");
             if (scanf(" %d", &accNum)==1&&((ch=getchar())=='\n'||ch==EOF)) {}

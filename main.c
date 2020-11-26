@@ -38,18 +38,18 @@ int main()
                 printf("Please enter a valid input!\n");
                 while ((ch=getchar())!='\n'&&ch!=EOF) { }
             }
-
+            
         } else if (option=='D'&&oneCharInput==1) { // deposit
             printf("Account number?:\n");
             if (scanf(" %d", &accNum)==1&&((ch=getchar())=='\n'||ch==EOF)) {}
             else { // invalid input
                 printf("Please enter a valid input!\n\n");
                 while ((ch=getchar())!='\n'&&ch!=EOF) { }
+                continue;
             }
             printf("Amount?:\n");
             if (scanf(" %lf", &amount)==1&&((ch=getchar())=='\n'||ch==EOF)) {
                 deposit(accNum, amount);
-                continue;
             }
             else { // invalid input
                 printf("Please enter a valid input!\n");

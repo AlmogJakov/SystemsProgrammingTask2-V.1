@@ -24,7 +24,7 @@ int main()
             if (scanf(" %lf", &amount)==1&&((ch=getchar())=='\n'||ch==EOF)) {
                 openAcc(amount);
             }
-            else { // check input
+            else { // invalid input
                 printf("Please enter a valid input!\n");
                 while ((ch=getchar())!='\n'&&ch!=EOF) { }
             }
@@ -34,7 +34,7 @@ int main()
             if (scanf(" %d", &accNum)==1&&((ch=getchar())=='\n'||ch==EOF)) {
                 balance(accNum);
             }
-            else { // check input
+            else { // invalid input
                 printf("Please enter a valid input!\n");
                 while ((ch=getchar())!='\n'&&ch!=EOF) { }
             }
@@ -42,16 +42,16 @@ int main()
         } else if (option=='D'&&oneCharInput==1) { // deposit
             printf("Account number?:\n");
             if (scanf(" %d", &accNum)==1&&((ch=getchar())=='\n'||ch==EOF)) {}
-            else { // check input
+            else { // invalid input
                 printf("Please enter a valid input!\n\n");
                 while ((ch=getchar())!='\n'&&ch!=EOF) { }
+                continue;
             }
             printf("Amount?:\n");
             if (scanf(" %lf", &amount)==1&&((ch=getchar())=='\n'||ch==EOF)) {
                 deposit(accNum, amount);
-                continue;
             }
-            else { // check input
+            else { // invalid input
                 printf("Please enter a valid input!\n");
                 while ((ch=getchar())!='\n'&&ch!=EOF) { }
             }
@@ -59,7 +59,7 @@ int main()
         } else if (option=='W'&&oneCharInput==1) { // withdrawal
             printf("Account number?:\n");
             if (scanf(" %d", &accNum)==1&&((ch=getchar())=='\n'||ch==EOF)) {}
-            else { // check input
+            else { // invalid input
                 printf("Please enter a valid input!\n\n");
                 while ((ch=getchar())!='\n'&&ch!=EOF) { }
                 continue;
@@ -68,7 +68,7 @@ int main()
             if (scanf(" %lf", &amount)==1&&((ch=getchar())=='\n'||ch==EOF)) {
                 withdrawal(accNum, amount);
             }
-            else { // check input
+            else { // invalid input
                 printf("Please enter a valid input!\n");
                 while ((ch=getchar())!='\n'&&ch!=EOF) { }
             }
@@ -78,7 +78,7 @@ int main()
             if (scanf(" %d", &accNum)==1&&((ch=getchar())=='\n'||ch==EOF)) {
                 closeAcc(accNum);
             }
-            else { // check input
+            else { // invalid input
                 printf("Please enter a valid input!\n");
                 while ((ch=getchar())!='\n'&&ch!=EOF) { }
             }
@@ -88,7 +88,7 @@ int main()
             if (scanf(" %lf", &interest)==1&&((ch=getchar())=='\n'||ch==EOF)) {
                 addInterest(interest);
             }
-            else { // check input
+            else { // invalid input
                 printf("Please enter a valid input!\n");
                 while ((ch=getchar())!='\n'&&ch!=EOF) { }
             }
